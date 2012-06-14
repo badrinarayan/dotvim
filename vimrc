@@ -3,11 +3,12 @@ call pathogen#helptags()
 
 set nocompatible
 
+set background=light
 set ruler
 set number
 
 syntax on
-set guifont=Consolas:12
+set guifont=Consolas:h13
 
 set ts=2
 set sts=2
