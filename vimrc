@@ -1,23 +1,26 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+syntax on
+filetype indent on
+filetype plugin on
+
 set nocompatible
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 let g:Powerline_symbols='fancy'
 set t_Co=256 "Explicitly tell Vim we are using a terminal that supports 256 colors
+set mouse=a
 
 "set background=light
 set ruler
 set number
 
-syntax on
-set guifont=Consolas:h13
 
-set ts=2
-set sts=2
-set sw=2
-set et
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 
 set autoindent
 set copyindent
@@ -41,8 +44,14 @@ vnoremap / /\v
 set hidden     "Hides buffer instead of closing them
 
 set pastetoggle=<F2>
+"Even Better Solution for handling paste
+"Credit http://www.drbunsen.org/text-triumvirate.html#fn:2
+noremap <leader>p :set paste<CR>:put *<CR>:set nopaste<CR>
+noremap <leader>y "*y
+noremap <leader>yy "*Y
 
 inoremap jj <ESC>
+nnoremap ; :
 
 "------------------
 "Showing invisibles
