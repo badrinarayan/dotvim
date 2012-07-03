@@ -18,16 +18,28 @@ set et
 set autoindent
 set copyindent
 
+let mapleader=","
+
+"-------------
+" Search Fixes
+"-------------
 set ignorecase "ignore case while searching
 set smartcase  "ignore case if search pattern is all lowercase
 set incsearch
 set hlsearch
+"Turn off highlighting
+noremap <leader><space> :noh<cr> 
+set gdefault " /g by default
+nnoremap / /\v
+vnoremap / /\v
 
 set hidden     "Hides buffer instead of closing them
 
 set pastetoggle=<F2>
 
+"------------------
 "Showing invisibles
+"------------------
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 "Invisible character colors
