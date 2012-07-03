@@ -33,9 +33,12 @@ set gdefault " /g by default
 nnoremap / /\v
 vnoremap / /\v
 
+"TODO: See if this messes up other stuff
 set hidden     "Hides buffer instead of closing them
 
 set pastetoggle=<F2>
+
+inoremap jj <ESC>
 
 "------------------
 "Showing invisibles
