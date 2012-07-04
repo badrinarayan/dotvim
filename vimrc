@@ -5,17 +5,27 @@ syntax on
 filetype indent on
 filetype plugin on
 
+set spell
+set spelllang=en
+
 set nocompatible
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 let g:Powerline_symbols='fancy'
-set t_Co=256 "Explicitly tell Vim we are using a terminal that supports 256 colors
-set mouse=a
 
-"set background=light
 set ruler
 set number
 
+colorscheme ir_black
+if has("gui_running")
+  call togglebg#map("<F5>")
+  set columns=90
+  set lines=40
+  set guifont=Inconsolata-dz_for_Powerline:h14
+else
+  set mouse=a
+  set t_Co=256 "Explicitly tell Vim we are using a terminal that supports 256 colors
+end
 
 set tabstop=2
 set softtabstop=2
