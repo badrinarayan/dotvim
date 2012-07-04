@@ -78,14 +78,29 @@ nnoremap ; :
 "------------------
 "Showing invisibles
 "------------------
-nmap <leader>l :set list!<CR>
+nmap <leader>l :set list! list?<CR>
 set listchars=tab:▸\ ,eol:¬
 "Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
+"---------------------
+"Editing Configuration
+"---------------------
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+"----------------
+"Config for Vimux
+"----------------
+map <leader>rp :PromptVimTmuxCommand<CR>
+map <leader>rl :RunLastVimTmuxCommand<CR>
+map <leader>ri :InspectVimTmuxRunner<CR>
+map <leader>rx :CloseVimTmuxPanes<CR>
+map <leader>rs :InterruptVimTmuxRunner<CR>
+
+" Annoyances
 set visualbell
 set noerrorbells
+
+
