@@ -5,9 +5,6 @@ syntax on
 filetype indent on
 filetype plugin on
 
-set spell
-set spelllang=en
-
 set nocompatible
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
@@ -15,6 +12,12 @@ let g:Powerline_symbols='fancy'
 
 set ruler
 set number
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,hs_err*,*~
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\.git$\|\.svn$\|outputs\|inputs',
+  \ 'file': '\.so$\|\.swp$\|\.zip$\|\.mat$\|^hs_err',
+  \ }
 
 colorscheme ir_black
 if has("gui_running")
