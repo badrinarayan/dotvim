@@ -13,6 +13,15 @@ let g:Powerline_symbols='fancy'
 set ruler
 set number
 
+" Map ctrl-movement keys to window switching
+map <C-up>    <C-w>k
+map <C-down>  <C-w>j
+map <C-right> <C-w>l
+map <C-left>  <C-w>h
+
+map <C-j> :bnext<cr>
+map <C-k> :bprevious<cr>
+
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,hs_err*,*~
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\.git$\|\.svn$\|outputs\|inputs',
@@ -23,8 +32,8 @@ colorscheme ir_black
 if has("gui_running")
   call togglebg#map("<F5>")
   set columns=90
-  set lines=40
-  set guifont=Inconsolata-dz_for_Powerline:h14
+  set lines=50
+  set guifont=Inconsolata-dz_for_Powerline:h13
 else
   set mouse=a
   set t_Co=256 "Explicitly tell Vim we are using a terminal that supports 256 colors
