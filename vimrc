@@ -90,6 +90,10 @@ highlight SpecialKey guifg=#4a4a59
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+"-------------
+"Latex TeX-PDF
+"-------------
+let g:tex_pdf_map_leader_keys = 0
 "----------------
 "Config for Vimux
 "----------------
