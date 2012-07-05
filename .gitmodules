@@ -40,3 +40,6 @@
 [submodule "bundle/TeX-PDF"]
 	path = bundle/TeX-PDF
 	url = https://github.com/vim-scripts/TeX-PDF.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
