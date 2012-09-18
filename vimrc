@@ -10,6 +10,12 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 let g:Powerline_symbols='fancy'
 
+set timeoutlen=300
+
+autocmd FileType tex set textwidth=78 
+autocmd FileType tex set wrap
+autocmd FileType tex set linebreak
+
 set ruler
 set number
 
@@ -46,8 +52,6 @@ set expandtab
 
 set autoindent
 set copyindent
-
-let mapleader=","
 
 "-------------
 " Search Fixes
@@ -90,6 +94,10 @@ highlight SpecialKey guifg=#4a4a59
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+"-------------
+"Latex TeX-PDF
+"-------------
+let g:tex_pdf_map_leader_keys = 0
 "----------------
 "Config for Vimux
 "----------------
@@ -98,6 +106,23 @@ map <leader>rl :RunLastVimTmuxCommand<CR>
 map <leader>ri :InspectVimTmuxRunner<CR>
 map <leader>rx :CloseVimTmuxPanes<CR>
 map <leader>rs :InterruptVimTmuxRunner<CR>
+
+" NERDTree
+map <leader>t :NERDTree<CR>
+
+" Fugitive mappings from 
+" http://www.michaelxavier.net/posts/2010-03-13-Git-vim-bindings-for-fugitive-vim.html
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>ga :Gwrite<cr>
+nmap <leader>gl :Glog<cr>
+nmap <leader>gd :Gdiff<cr>
+nmap <leader>gm :Gmove<space>
+"Same as git rm %
+nmap <leader>gr :Gremove<cr>
+"Same as git checkout %
+nmap <leader>gu :Gread<cr>
+nmap <leader>gp :Git push<cr>
 
 " Annoyances
 set visualbell
