@@ -34,7 +34,12 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.so$\|\.swp$\|\.zip$\|\.mat$\|^hs_err',
   \ }
 
-colorscheme ir_black
+colorscheme jellybeans
+"set background=light
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
+set t_Co=256
+
 if has("gui_running")
   call togglebg#map("<F5>")
   set columns=90
@@ -128,4 +133,5 @@ nmap <leader>gp :Git push<cr>
 set visualbell
 set noerrorbells
 
-
+set noswapfile
+set nobackup
